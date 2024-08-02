@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var calendarEl = document.getElementById("calendar");
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  const calendarEl = document.getElementById("calendar");
+  const calendar = new FullCalendar.Calendar(calendarEl, {
     customButtons: {
       addSchedule: {
         text: "일정 등록",
@@ -52,6 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         end: twoMonthAddDate,
       };
     },
+
+    events: {
+      url: "http://localhost:3000/events",
+      failure: function() {
+        alert("이벤트 목록을 가져오다가 문제가 발생했습니다.");
+      },
+    }
+
   });
 
   calendar.render();
