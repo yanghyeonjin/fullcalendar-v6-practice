@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("end", getKrDate(end));
     },
 
-    validRange: function (nowDate) {
-      const addedTwoMonth = nowDate.getMonth() + 2;
-      const twoMonthAddDate = new Date(nowDate).setMonth(addedTwoMonth);
-
-      return {
-        start: nowDate,
-        end: twoMonthAddDate,
-      };
-    },
+    // validRange: function (nowDate) {
+    //   const addedTwoMonth = nowDate.getMonth() + 2;
+    //   const twoMonthAddDate = new Date(nowDate).setMonth(addedTwoMonth);
+    //
+    //   return {
+    //     start: nowDate,
+    //     end: twoMonthAddDate,
+    //   };
+    // },
 
     events: {
       url: "http://localhost:3000/events",
